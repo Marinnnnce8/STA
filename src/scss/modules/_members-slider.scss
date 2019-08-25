@@ -1,0 +1,30 @@
+.members-slider {
+    border-top: 1px solid $skyblue;
+    .uk-slidenav {
+        background: $white;
+        border-radius: 50px;
+        height: 45px;
+        width: 45px;
+        svg {
+            color: $midblue;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: $nbSec ease-in-out;
+        }
+        @include hover {
+            svg {
+                color: $skyblue;
+            }
+        }
+    }
+    .uk-slider-container {
+        margin-bottom: 10px;
+    }
+    @media (max-width: $breakpointLarge) {
+        .uk-slidenav {
+            display: none;
+        }
+    }
+}

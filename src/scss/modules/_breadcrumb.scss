@@ -1,0 +1,24 @@
+.sta-breadcrumb {
+    padding: 25px 0;
+    li {
+        a {
+            text-transform: uppercase;
+            color: $black;
+            position: relative;
+            display: inline-block;
+            padding: 0 15px;
+            span {
+                position: absolute;
+                top: 50%;
+                transform: translate(50%, -50%);
+                right: 0;
+            }
+        }
+        &:first-of-type a {
+            padding-left: 0;
+        }
+    }
+    .breadcrumb--active {
+        color: $midblue;
+    }
+}

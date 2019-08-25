@@ -1,0 +1,204 @@
+
+
+.hotels-top {
+	background: $lightblue;
+	border-bottom: 1px solid $skyblue;
+	padding: 80px 0 50px;
+
+	h2,
+	span {
+		color: $midblue;
+		margin-bottom: 15px;
+	}
+
+	span {
+		color: $grey;
+		font-size: 18px;
+		display: block;
+	}
+}
+
+.hotels-main {
+	padding: 50px 0 0;
+
+	@media (max-width: $breakpointLarge) {
+		padding: 40px 0;
+	}
+
+	@media (max-width: $breakpointMedium) {
+		.uk-container .uk-flex-between {
+			flex-direction: column;
+		}
+	}
+}
+
+.hotels-text-wrap {
+	width: 55%;
+
+	@media (max-width: $breakpointMedium) {
+		width: 100%;
+	}
+}
+
+.hotels-text {
+	border: 1px solid $skyblue;
+	border-radius: 3px;
+	padding: 60px 50px 80px;
+
+	p {
+		margin-bottom: 40px;
+
+		&:first-of-type {
+			color: $black;
+		}
+	}
+
+	@media (max-width: $breakpointLarge) {
+		padding: 0;
+		border: 0;
+	}
+}
+
+.hotels-contact-wrap {
+	width: 42%;
+	margin-top: -250px;
+	z-index: 1;
+
+	@media (max-width: $breakpointLarge) {
+		margin-top: -100px;
+	}
+
+	@media (max-width: $breakpointMedium) {
+        width: 100%;
+        margin-top: 0;
+	}
+}
+
+.hotels-contact {
+	border: 1px solid $skyblue;
+	border-radius: 3px;
+	margin-bottom: 40px;
+	padding: 40px 30px 50px;
+	background: $white;
+
+	img {
+		width: 150px;
+		margin-bottom: 30px;
+	}
+
+	.h4 {
+		color: $midblue;
+		display: block;
+		margin-bottom: 15px;
+	}
+
+	.hotels-contact__item {
+		margin-bottom: 25px;
+
+		span {
+			display: block;
+			margin-bottom: 5px;
+		}
+
+		>div {
+			margin-bottom: 7px;
+		}
+
+		.tel {
+			color: $grey;
+		}
+
+		.email {
+			color: $midblue;
+		}
+	}
+}
+
+.hotel-hours {
+	>span {
+		display: block;
+		padding-left: 30px;
+		position: relative;
+		text-decoration: underline;
+
+		>span {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+.hotels-book {
+	border: 1px solid $skyblue;
+	border-radius: 3px;
+	padding: 40px 30px 50px;
+	margin-bottom: 25px;
+
+	.h4,
+	a {
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	.h4 {
+		color: $midblue;
+		margin-bottom: 20px;
+	}
+
+	.uk-button {
+		text-align: left;
+		padding-left: 40px;
+
+		@include hover {
+			span {
+				left: 20px;
+				right: auto;
+			}
+		}
+	}
+}
+
+.hotels-info {
+	padding-left: 30px;
+
+	.h6 {
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		padding-left: 0;
+
+		li {
+			color: $grey;
+			position: relative;
+			padding: 0 25px;
+			margin-bottom: 5px;
+
+			span {
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				background: $green-light;
+				border-radius: 50px;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+
+				svg {
+					color: $white;
+					width: 14px;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					position: absolute;
+				}
+			}
+		}
+	}
+}

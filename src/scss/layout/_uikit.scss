@@ -1,0 +1,35 @@
+a, .uk-link {
+	color: $red;
+}
+
+.uk-link-toggle:focus .uk-link,
+.uk-link-toggle:hover .uk-link,
+.uk-link:hover,
+a:hover {
+	color: $red;
+}
+
+.uk-logo {
+
+	img {
+		width: 228px;
+	}
+}
+
+.uk-navbar,
+.uk-navbar-left,
+.uk-navbar-right {
+
+	@media (max-width: $breakpointMobile) {
+		display: block;
+		text-align: center;
+	}
+}
+
+.uk-navbar-nav {
+
+	@media (max-width: $breakpointMobile) {
+		justify-content: center;
+		overflow: auto;
+	}
+}

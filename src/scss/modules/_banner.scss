@@ -1,0 +1,78 @@
+//----------  banner
+//------------------------------------------------------------------------------
+.banner-section {
+	min-height: 100vh;
+}
+
+.banner-inner {
+	padding: 150px 0;
+	width: 55%;
+
+	h1 {
+		margin-bottom: 70px;
+	}
+
+	@media (max-width: $breakpointLarge) {
+		padding: 125px 30px 70px 0;
+		width: 100%;
+	}
+
+	@media (max-width: $breakpointSmall) {
+		padding: 125px 0 30px;
+		width: 100%;
+		h1 {
+			margin-bottom: 50px;
+		}
+		.uk-button:first-of-type {
+			margin-right: 15px;
+		}
+	}
+}
+
+.banner-wrap {
+	.banner-item {
+		text-align: center;
+		flex: 1;
+		padding: 0 27px;
+
+		img {
+			margin-bottom: 20px;
+			filter: drop-shadow(8px 8px 10px $grey);
+			width: 100px;
+			height: auto;
+		}
+
+		span {
+			display: block;
+
+			&:first-of-type {
+				color: $black;
+				margin-bottom: 15px;
+				font-size: 25px;
+			}
+		}
+
+		p {
+			font-size: 16px;
+		}
+
+		@media (max-width: $breakpointSmall) {
+			margin-bottom: 70px;
+			padding: 0 15px 0 0;
+
+			&:last-of-type {
+				padding: 0;
+			}
+			img {
+				width: 40px;
+			}
+			span:first-of-type {
+				font-size: 16px;
+			}
+
+			p {
+				display: none;
+			}
+		}
+	}
+}

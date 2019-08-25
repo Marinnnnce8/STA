@@ -1,0 +1,18 @@
+.members-banner__inner {
+    padding: 80px 0 100px;
+
+    h2 {
+        color: $midblue;
+        margin-bottom: 20px;
+    }
+    p {
+        &:first-of-type {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        &:last-of-type {
+            font-size: 24px;
+            color: $black;
+        }
+    }
+}
