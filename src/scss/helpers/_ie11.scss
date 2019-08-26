@@ -1,3 +1,25 @@
-// @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+    .header {
+        padding-bottom: 30px;
+    }
+    .area-card--full {
+        .area-card--inner {
+            height: 610px;
+        }
+        @media (max-width: $breakpointSmall) {
+            .area-card--inner {
+                height: 300px;
+            }
+        }
+    }
+    
+    .area-card--half {
+        .area-card--inner {
+            height: 300px;
+        }
+    }
 
-// }
+    .listing-item__inner {
+        height: 365px;
+    }
+}

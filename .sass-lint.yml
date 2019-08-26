@@ -11,6 +11,7 @@ files:
     - 'src/scss/base/_grid-framework.scss'
     - 'src/scss/base/_fonts.scss'
     - 'src/scss/layout/_nb.scss'
+    - 'src/scss/helpers/_ie11.scss'
 
 rules:
   attribute-quotes: 2

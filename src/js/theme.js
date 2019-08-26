@@ -16,6 +16,8 @@ var theme = {
 		const dropdownBtn = $('.js-toggle-dropdown');
 		const dropdownActive = 'dropdown--active';
 		const dropdownContainer = $('.uk-navbar-dropdown');
+		const fixedSection = $('.js-members-section');
+		const fixedClass = 'fixed-class';
 		if(toggleBtn.length){
 			this.toggleNav(toggleBtn, classActive, nav);
 		}
@@ -25,7 +27,28 @@ var theme = {
 		if(dropdownContainer.length) {
 			this.toggleDopdownOut(dropdownContainer, dropdownBtn, dropdownActive);
 		}
+		this.stopScroll(fixedSection, fixedClass);
 	},
+
+	// stopScroll: function(fixedSection, fixedClass) {
+	// 	let distance = fixedSection.offset().top;
+	// 	$(window).scroll(function() {
+	// 		if ($(window).scrollTop() >= distance ) {
+	// 			// fixedSection.addClass(fixedClass);
+	// 		}
+	// 	});
+	// 	// $(document).scroll(function(e){
+	// 	// 	if (fixedSection.hasClass(fixedClass)) {
+	// 	// 		//if (e.target.id == 'masc') {
+	// 	// 			console.log('lalalala');
+	// 	// 			e.preventDefault();
+	// 	// 		//}
+	// 	// 		//else{
+	// 	// 		//	e.stopPropagation();
+	// 	// 		//}
+	// 	// 	}
+	// 	// });
+	// },
 
 	protectLinks: function() {
 		var $links = $("a[target='_blank']");
