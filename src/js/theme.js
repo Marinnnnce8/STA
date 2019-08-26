@@ -27,7 +27,7 @@ var theme = {
 		if(dropdownContainer.length) {
 			this.toggleDopdownOut(dropdownContainer, dropdownBtn, dropdownActive);
 		}
-		this.stopScroll(fixedSection, fixedClass);
+		// this.stopScroll(fixedSection, fixedClass);
 	},
 
 	// stopScroll: function(fixedSection, fixedClass) {
