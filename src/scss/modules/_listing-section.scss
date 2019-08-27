@@ -1,13 +1,16 @@
 .listing {
-    background: $lightblue;
+	background: $lightblue;
 	border-top: 2px solid $lightblue;
 	padding: 80px 0 100px;
-    >.uk-container {
+
+	>.uk-container {
 		padding-left: 35px;
 		padding-right: 35px;
 	}
+
 	@media (max-width: $breakpointSmall) {
-        padding: 60px 0;
+		padding: 60px 0;
+
 		>.uk-container {
 			padding-left: 15px;
 			padding-right: 15px;
@@ -16,37 +19,46 @@
 }
 
 .listing-filter {
-    li {
-        padding: 0 35px 0 5px;
-        a {
-            color: $black;
-            font-size: 20px;
-            display: inline-block;
-            padding: 25px 0;
-            border-bottom: 5px solid transparent;
-            transition: $nbSec ease-in-out;
-            @include hover {
-                border-bottom: 5px solid $midblue;
-                text-decoration: none;
-            }
-        }
-    }
+	li {
+		padding: 0 35px 0 5px;
+
+		button {
+			color: $black;
+			font-size: 20px;
+			display: inline-block;
+			padding: 25px 0;
+			border-bottom: 5px solid transparent;
+			transition: $nbSec ease-in-out;
+
+			@include hover {
+				border-bottom: 5px solid $midblue;
+				text-decoration: none;
+			}
+		}
+	}
 }
 
 .listing-item {
-    padding: 5px;
-    .uk-button {
-        padding: 0 10px;
-        border: 0;
-    }
-    @media (max-width: $breakpointSmall) {
-        padding: 5px 0;
-    }
+	padding: 5px;
+
+	.uk-button {
+		padding: 0 10px;
+		border: 0;
+		font-size: 12px;
+		margin-bottom: 10px;
+		min-width: 130px;
+		text-align: center;
+	}
+
+	@media (max-width: $breakpointSmall) {
+		padding: 5px 0;
+	}
 }
 
 .listing-item__inner {
 	min-height: 365px;
 	position: relative;
+
 	a {
 		position: absolute;
 		left: 0;
@@ -58,15 +70,18 @@
 }
 
 .listing-item-bottom {
-	width: 100%;
+	width: calc(100%);
 	position: absolute;
 	left: 0;
-	bottom: 0;
+	bottom: 1px;
 	background: rgba($black, .7);
-	z-index: 2;
 	padding: 10px 20px 5px;
-	min-height: 100px;
-	// pointer-events: none;
+	min-height: 85px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	z-index: 0;
+
 	>span:first-of-type {
 		color: $white;
 		display: block;
@@ -75,14 +90,27 @@
 	}
 }
 
+.listing-item-bottom--active {
+	animation: goTop .1s linear forwards;
+}
+
 .listing-item__text {
-	height: 0;
-	padding: 10px; 
-	opacity: 0;
+	display: none;
+	padding: 10px 10px 0;
 
 	p {
 		color: $white;
 		font-weight: $light;
 		font-size: 16px;
+	}
+}
+
+@keyframes goTop {
+	0% {
+		top: auto;
+	}
+
+	100% {
+		top: 0;
 	}
 }

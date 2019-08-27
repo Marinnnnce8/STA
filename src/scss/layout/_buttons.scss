@@ -126,6 +126,7 @@ input[type='submit'] {
 	position: relative;
 	display: inline-block;
 	margin-right: 5px;
+	transition: $nbSec ease-in-out;
 
 	svg {
 		color: $midblue;
@@ -133,6 +134,9 @@ input[type='submit'] {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+	}
+	@include hover {
+		transform: scale(1.1);
 	}
 }
 
