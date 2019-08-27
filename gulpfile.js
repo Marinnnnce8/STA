@@ -9,14 +9,14 @@ gulp.task('build', function() {
 	globalVars.createDistFolder();
 	globalVars.productionBuild = true;
 	fs.copyFileSync('favicon.ico', 'dist/favicon.ico');
-	runSequence('html-clean', 'html', 'css', 'js', 'assets');
+	runSequence('html-clean', 'html', 'css','css-push', 'js', 'assets');
 });
 
 gulp.task('build-dev', function() {
 	globalVars.createDistFolder();
 	globalVars.productionBuild = false;
 	fs.copyFileSync('favicon.ico', 'dist/favicon.ico');
-	runSequence('html', 'css', 'js', 'assets');
+	runSequence('html', 'css', 'css-push', 'js', 'assets');
 });
 
 // delete dist folder

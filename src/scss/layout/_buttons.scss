@@ -74,6 +74,7 @@ input[type='submit'] {
 	@media (max-width: $breakpointLarge) {
 		font-size: 12px;
 		padding: 5px 40px 5px 15px;
+
 		.uk-icon {
 			right: 5px;
 		}
@@ -103,16 +104,25 @@ input[type='submit'] {
 	color: $blue;
 	position: relative;
 
-	svg {
+	>.uk-icon {
 		color: $skyblue;
+
+		svg {
+			color: $skyblue;
+		}
 	}
 
 	@include hover {
 		background: $overlayblue;
 		color: $blue;
 
-		svg {
+		>.uk-icon {
 			color: $black;
+			transition: $nbSec ease-in-out;
+	
+			svg {
+				color: $black;
+			}
 		}
 	}
 }
@@ -126,6 +136,7 @@ input[type='submit'] {
 	position: relative;
 	display: inline-block;
 	margin-right: 5px;
+	color: $midblue;
 	transition: $nbSec ease-in-out;
 
 	svg {
@@ -135,6 +146,7 @@ input[type='submit'] {
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
+
 	@include hover {
 		transform: scale(1.1);
 	}
@@ -142,6 +154,7 @@ input[type='submit'] {
 
 .social-btn--twitter {
 	border: 3px solid $twitter-blue;
+	color: $twitter-blue;
 
 	svg {
 		color: $twitter-blue;
@@ -150,6 +163,7 @@ input[type='submit'] {
 
 .social-btn--mail {
 	border: 3px solid $icon-grey;
+	color: $icon-grey;
 
 	svg {
 		color: $icon-grey;

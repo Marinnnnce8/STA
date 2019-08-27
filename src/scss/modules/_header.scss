@@ -54,6 +54,7 @@
 		top: 0;
 		height: calc(100% + 2px);
 		border-left: 1px solid transparent;
+		z-index: 3;
 	}
 
 	.uk-navbar-toggle--active {
@@ -75,11 +76,23 @@
 			padding: 10px;
 		}
 
+		.uk-logo img {
+			max-width: 130px;
+		}
+
 		.uk-parent>a {
 			text-align: left;
 			width: 100%;
 			display: block;
 			min-height: 0;
+		}
+
+		.uk-parent {
+
+			>a,
+			button {
+				padding: 10px;
+			}
 		}
 
 		.uk-navbar-dropdown {
@@ -128,6 +141,7 @@
 		.uk-logo img {
 			max-width: 125px;
 		}
+
 		.uk-navbar-nav {
 			display: none;
 			border-top: 1px solid $skyblue;
@@ -137,6 +151,7 @@
 			background: $white;
 			padding: 10px 0;
 			width: 100%;
+			z-index: 2;
 		}
 
 		.navbar-contact {
@@ -162,13 +177,14 @@
 					background: $lightblue;
 					z-index: 1;
 
-					svg {
+					&::before {
 						position: absolute;
-						transform: translate(-50%, -50%);
+						transform: translate(-50%, -50%) rotate(265deg);
 						top: 50%;
 						left: 50%;
 						z-index: 1;
 						width: 30px;
+						font-size: 24px;
 					}
 				}
 			}

@@ -1,49 +1,62 @@
 .members-slider {
-    border-top: 1px solid $skyblue;
-    .uk-slidenav {
-        background: $white;
-        border-radius: 50px;
-        height: 45px;
-        width: 45px;
-        svg {
-            color: $midblue;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            transition: $nbSec ease-in-out;
-        }
-        @include hover {
-            svg {
-                color: $skyblue;
-            }
-        }
-    }
-    .uk-slider-container {
-        margin-bottom: 10px;
-    }
-    .uk-panel {
-        height: 350px;
-    }
-    @media (max-width: $breakpointLarge) {
-        .uk-slidenav {
-            display: none;
-        }
-    }
-    @media (max-width: $breakpointSmall) {
+	border-top: 1px solid $skyblue;
 
-        .uk-slider-items {
-            display: none;
-        }
-    }
+	.font-ico-arrow-left,
+	.font-ico-arrow-right {
+		background: $white;
+		border-radius: 50px;
+		height: 55px;
+		width: 55px;
+
+		&::before {
+			color: $skyblue;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			font-size: 38px;
+			transform: translate(-50%, -50%);
+			transition: $nbSec ease-in-out;
+		}
+
+		@include hover {
+			&::before {
+				font-size: 42px;
+			}
+		}
+	}
+
+	a svg {
+		display: none;
+	}
+
+	.uk-slider-container {
+		margin-bottom: 10px;
+	}
+
+	.uk-panel {
+		height: 350px;
+	}
+
+	@media (max-width: $breakpointLarge) {
+		.uk-slidenav {
+			display: none;
+		}
+	}
+
+	@media (max-width: $breakpointSmall) {
+
+		.uk-slider-items {
+			display: none;
+		}
+	}
 }
 
 .members-slider__inner {
-    @media (max-width: $breakpointSmall) {
-        background-image: url('../assets/images/banner.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: 185px;
-    }
+	@media (max-width: $breakpointSmall) {
+		background-image: url('../assets/images/banner.jpg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-height: 185px;
+	}
 }

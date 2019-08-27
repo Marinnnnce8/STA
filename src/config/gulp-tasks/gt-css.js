@@ -37,6 +37,11 @@ gulp.task('css', function () {
 		.pipe(gulp.dest('dist/css'));
 });
 
+gulp.task('css-push', function(){
+    return gulp.src('src/css/*.css')
+	.pipe(gulp.dest('dist/css'));
+});
+
 gulp.task('sasslint', function () {
 	return gulp.src(['src/scss/**/*.scss', 'src/html/**/**/*.scss'])
 		.pipe(sassLint({

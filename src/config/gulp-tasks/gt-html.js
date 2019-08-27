@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const validator = require('gulp-html');
 const clean = require('gulp-clean');
 
 
@@ -11,6 +10,5 @@ gulp.task('html-clean', function () {
 
 gulp.task('html', function(){
     return gulp.src('src/*.html')
-      // .pipe(validator())
       .pipe(gulp.dest('dist/'));
 });
