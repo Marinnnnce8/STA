@@ -4,11 +4,13 @@
     h2 {
         color: $midblue;
         margin-bottom: 20px;
+        font-weight: 400;
     }
     p {
         &:first-of-type {
             font-size: 20px;
             margin-bottom: 30px;
+            font-weight: $light;
         }
         &:last-of-type {
             font-size: 24px;

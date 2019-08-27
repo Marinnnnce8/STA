@@ -1,9 +1,7 @@
-
-
 .hotels-top {
 	background: $lightblue;
 	border-bottom: 1px solid $skyblue;
-	padding: 80px 0 50px;
+	padding: 70px 0 60px;
 
 	h2,
 	span {
@@ -11,10 +9,33 @@
 		margin-bottom: 15px;
 	}
 
+	h2 {
+		font-weight: 400;
+	}
+
 	span {
 		color: $grey;
-		font-size: 18px;
+		font-weight: $light;
+		font-size: 20px;
 		display: block;
+	}
+
+	.uk-button {
+		padding: 0 15px;
+		line-height: 26px;
+	}
+
+	@media (max-width: $breakpointSmall) {
+		padding: 35px 0 30px;
+
+		h2 {
+			font-size: 30px;
+			margin-bottom: 10px;
+		}
+
+		span {
+			font-size: 18px;
+		}
 	}
 }
 
@@ -25,7 +46,9 @@
 		padding: 40px 0;
 	}
 
-	@media (max-width: $breakpointMedium) {
+	@media (max-width: $breakpointSmall) {
+		padding: 25px 0;
+
 		.uk-container .uk-flex-between {
 			flex-direction: column;
 		}
@@ -33,9 +56,17 @@
 }
 
 .hotels-text-wrap {
-	width: 55%;
+	width: 65%;
+
+	@media (max-width: $breakpointLarge) {
+		width: 53%;
+	}
 
 	@media (max-width: $breakpointMedium) {
+		width: 49%;
+	}
+
+	@media (max-width: $breakpointSmall) {
 		width: 100%;
 	}
 }
@@ -51,26 +82,42 @@
 		&:first-of-type {
 			color: $black;
 		}
+
+		&:not(:first-of-type) {
+			font-size: 18px;
+			font-weight: $light;
+		}
 	}
 
 	@media (max-width: $breakpointLarge) {
 		padding: 0;
 		border: 0;
 	}
+
+	@media (max-width: $breakpointSmall) {
+		p {
+			margin-bottom: 25px;
+		}
+	}
 }
 
 .hotels-contact-wrap {
-	width: 42%;
+	width: 32%;
 	margin-top: -250px;
 	z-index: 1;
 
 	@media (max-width: $breakpointLarge) {
 		margin-top: -100px;
+		width: 37%;
 	}
 
 	@media (max-width: $breakpointMedium) {
-        width: 100%;
-        margin-top: 0;
+		width: 47%;
+	}
+
+	@media (max-width: $breakpointSmall) {
+		width: 100%;
+		margin-top: 0;
 	}
 }
 
@@ -95,9 +142,21 @@
 	.hotels-contact__item {
 		margin-bottom: 25px;
 
-		span {
+		span:not(.h4) {
 			display: block;
 			margin-bottom: 5px;
+			font-size: 16px;
+		}
+
+		span:not(.uk-text-strong),
+		a,
+		p {
+			font-weight: $light;
+		}
+
+		.uk-text-strong {
+			font-weight: $medium;
+			margin-right: 5px;
 		}
 
 		>div {
@@ -105,11 +164,17 @@
 		}
 
 		.tel {
-			color: $grey;
+			color: $dark-grey;
 		}
 
 		.email {
 			color: $midblue;
+		}
+	}
+	@media (max-width: $breakpointSmall) {
+		padding: 40px 30px 15px;
+		img {
+			max-width: 125px;
 		}
 	}
 }
@@ -199,6 +264,11 @@
 					position: absolute;
 				}
 			}
+		}
+	}
+	@media (max-width: $breakpointSmall) {
+		.uk-icon {
+			display: none;
 		}
 	}
 }

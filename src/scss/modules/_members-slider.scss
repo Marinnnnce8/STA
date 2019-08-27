@@ -22,9 +22,28 @@
     .uk-slider-container {
         margin-bottom: 10px;
     }
+    .uk-panel {
+        height: 350px;
+    }
     @media (max-width: $breakpointLarge) {
         .uk-slidenav {
             display: none;
         }
+    }
+    @media (max-width: $breakpointSmall) {
+
+        .uk-slider-items {
+            display: none;
+        }
+    }
+}
+
+.members-slider__inner {
+    @media (max-width: $breakpointSmall) {
+        background-image: url('../assets/images/banner.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 185px;
     }
 }

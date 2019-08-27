@@ -8,24 +8,11 @@
 	}
 
 	.uk-logo img {
-		max-width: 100px;
+		max-width: 180px;
 	}
 
 	.uk-navbar {
 		position: static;
-	}
-
-	.uk-navbar-nav {
-		@media (max-width: $breakpointSmall) {
-			display: none;
-			border-top: 1px solid $skyblue;
-			position: absolute;
-			left: 0;
-			top: 107px;
-			background: $white;
-			padding: 10px 0;
-			width: 100%;
-		}
 	}
 
 	.uk-navbar-item {
@@ -36,6 +23,10 @@
 		color: $black;
 		border-top: 5px solid transparent;
 		text-transform: initial;
+		font-size: 16px;
+		font-family: $font-default;
+		font-weight: $medium;
+		transition: $nbSec ease-in-out;
 
 		@include hover {
 			background: $lightblue;
@@ -53,15 +44,6 @@
 		>a,
 		button {
 			padding: 10px 20px;
-		}
-
-		@media (max-width: $breakpointLarge) {
-			>a {
-				text-align: left;
-				width: 100%;
-				display: block;
-				min-height: 0;
-			}
 		}
 	}
 
@@ -88,11 +70,79 @@
 		}
 	}
 
-	.navbar-contact {
-		@media (max-width: $breakpointSmall) {
+	@media (max-width: $breakpointLarge) {
+		.uk-navbar-nav {
+			padding: 10px;
+		}
+
+		.uk-parent>a {
+			text-align: left;
+			width: 100%;
+			display: block;
+			min-height: 0;
+		}
+
+		.uk-navbar-dropdown {
+			padding: 5px;
+
+			li {
+				position: relative;
+
+				&:not(:last-of-type) {
+					border-bottom: 1px solid $lightblue;
+				}
+
+				a {
+					padding: 10px 5px;
+					color: $black;
+				}
+
+				span {
+					position: absolute;
+					right: 15px;
+					color: $skyblue;
+				}
+			}
+		}
+
+		.dropdown--active {
+			position: relative;
+
+			&::after {
+				position: absolute;
+				bottom: -14px;
+				width: 100%;
+				content: '';
+				left: 0;
+				height: 5px;
+				background: $midblue;
+			}
+
+			button {
+				color: $midblue;
+			}
+		}
+	}
+
+	@media (max-width: $breakpointSmall) {
+		.uk-logo img {
+			max-width: 125px;
+		}
+		.uk-navbar-nav {
+			display: none;
+			border-top: 1px solid $skyblue;
+			position: absolute;
+			left: 0;
+			top: 88px;
+			background: $white;
+			padding: 10px 0;
+			width: 100%;
+		}
+
+		.navbar-contact {
 			position: relative;
 			padding: 35px 20px;
-			background: $lightblue;
+			background: $softblue;
 
 			a {
 				display: inline-block;
@@ -109,7 +159,7 @@
 					top: 0;
 					width: 60px;
 					height: 100%;
-					background: $softblue;
+					background: $lightblue;
 					z-index: 1;
 
 					svg {
@@ -121,49 +171,6 @@
 						width: 30px;
 					}
 				}
-			}
-		}
-	}
-
-	.uk-navbar-dropdown {
-		@media (max-width: $breakpointLarge) {
-			padding: 5px;
-
-			li {
-				position: relative;
-				&:not(:last-of-type) {
-					border-bottom: 1px solid $lightblue;
-				}
-
-				a {
-					padding: 10px 5px;
-					color: $black;
-				}
-				span {
-					position: absolute;
-					right: 15px;
-					color: $skyblue;
-				}
-			}
-		}
-	}
-
-	.dropdown--active {
-		@media (max-width: $breakpointLarge) {
-			position: relative;
-
-			&::after {
-				position: absolute;
-				bottom: -14px;
-				width: 100%;
-				content: '';
-				left: 0;
-				height: 3px;
-				background: $midblue;
-			}
-
-			button {
-				color: $midblue;
 			}
 		}
 	}

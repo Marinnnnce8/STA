@@ -1,3 +1,12 @@
+.map-section {
+    @media (max-width: $breakpointLarge) {
+        padding: 0 30px;
+    }
+    @media (max-width: $breakpointSmall) {
+        padding: 0;
+    }
+}
+
 .map {
     min-height: 660px;
 }

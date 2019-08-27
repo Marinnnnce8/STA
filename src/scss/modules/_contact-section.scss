@@ -7,6 +7,7 @@
 
 	.uk-logo {
 		max-width: 250px;
+		margin-right: 60px;
 	}
 
 	.uk-button {
@@ -24,6 +25,9 @@
 	}
 
 	@media (max-width: $breakpointSmall) {
+		.uk-logo {
+			margin-right: 0;
+		}
 		.contact-item {
 			flex-direction: column;
 
@@ -41,10 +45,11 @@
 .contact-details {
 	border-top: 7px solid $babyblue;
 	border-bottom: 2px solid $babyblue;
-	padding: 30px 0;
+	padding: 20px 0;
 
 	.h3 {
 		display: block;
+		font-size: 24px;
 		margin-bottom: 15px;
 	}
 
@@ -55,6 +60,7 @@
 
 	a {
 		color: $black;
+		font-weight: $light;
 	}
 
 	@media (max-width: $breakpointSmall) {

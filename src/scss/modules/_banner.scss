@@ -10,6 +10,7 @@
 
 	h1 {
 		margin-bottom: 70px;
+		color: $black;
 	}
 
 	@media (max-width: $breakpointLarge) {
@@ -18,14 +19,21 @@
 	}
 
 	@media (max-width: $breakpointSmall) {
-		padding: 125px 0 30px;
+		padding: 55px 0 30px;
 		width: 100%;
 		h1 {
 			margin-bottom: 50px;
 		}
 		.uk-button:first-of-type {
-			margin-right: 15px;
+			margin-right: 5px;
 		}
+	}
+}
+
+.banner-box {
+	padding: 0 0 200px 100px;
+	@media (max-width: $breakpointSmall) {
+		padding: 0 0 50px 50px;
 	}
 }
 
@@ -44,11 +52,12 @@
 
 		span {
 			display: block;
+			font-weight: $medium;
 
 			&:first-of-type {
 				color: $black;
 				margin-bottom: 15px;
-				font-size: 25px;
+				font-size: 24px;
 			}
 		}
 

@@ -11,8 +11,17 @@
 
 html, body {
 	overflow-x: hidden;
+	font-family: $font-default;
 	width: 100%;
+	position: relative;
 }
+
+// .body-unactive {
+// 	height: 100vh;
+// 	overflow: hidden;
+// 	// position: relative;
+// 	// z-index: ;
+// }
 
 %clearfix {
 	&::before, &::after {

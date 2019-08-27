@@ -17,6 +17,9 @@
     
     .uk-card {
         position: relative;
+        img {
+            width: 100%;
+        }
         >a {
             position: absolute;
             left: 0;
@@ -34,12 +37,44 @@
 
 	.uk-card-body {
         background: $white;
+        padding: 40px 90px 100px 40px;
+        position: relative;
         h3 {
             margin-bottom: 25px;
         }
 		p {
-			width: 100%;
-		}
+            width: 100%;
+            font-size: 18px;
+            font-weight: $light;
+        }
+        .uk-button {
+            min-width: 40%;
+            position: absolute;
+            left: 40px;
+            bottom: 20px;
+            z-index: 1;
+        }
+    }
+    @media (max-width: $breakpointLarge) {
+        padding: 30px 0 50px;
+        .uk-grid>* {
+            padding-left: 15px;
+            margin-top: 15px;
+        }
+        .uk-card-body {
+            padding: 25px 25px 80px;
+            .uk-button {
+                left: 25px;
+            }
+        }
+        p {
+            width: 50%;
+        }
+    }
+    @media (max-width: $breakpointMedium) {
+        .uk-grid>* {
+            padding-left: 30px;
+        }
     }
 }
 

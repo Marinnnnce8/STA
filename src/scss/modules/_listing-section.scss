@@ -45,36 +45,44 @@
 }
 
 .listing-item__inner {
-    min-height: 365px;
+	min-height: 365px;
+	position: relative;
+	a {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+		z-index: 1;
+	}
 }
 
 .listing-item-bottom {
 	width: 100%;
-	position: relative;
-	z-index: 3;
-	padding: 10px 20px 55px;
-	pointer-events: none;
-	span:first-of-type {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: rgba($black, .7);
+	z-index: 2;
+	padding: 10px 20px 5px;
+	min-height: 100px;
+	// pointer-events: none;
+	>span:first-of-type {
 		color: $white;
 		display: block;
-		margin-bottom: 25px;
 		font-size: 22px;
+		font-weight: $semi-bold;
 	}
-	>.uk-icon-button {
-		background: $midblue;
+}
+
+.listing-item__text {
+	height: 0;
+	padding: 10px; 
+	opacity: 0;
+
+	p {
 		color: $white;
-		position: relative;
-		&::after {
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			border-radius: 50px;
-			background: rgba($midblue, .3);
-			content: '';
-			transition: $nbSec ease-in-out;
-			z-index: 2;
-		}
+		font-weight: $light;
+		font-size: 16px;
 	}
 }

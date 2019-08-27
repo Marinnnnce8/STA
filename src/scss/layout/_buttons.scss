@@ -31,6 +31,7 @@ input[type='submit'] {
 	line-height: 40px;
 	padding: 0 20px;
 	transition: 0.4s ease-out;
+
 	@include hover {
 		background-color: lighten($black, 30%);
 		border-radius: 20px;
@@ -39,25 +40,61 @@ input[type='submit'] {
 
 .uk-button {
 	background: $midblue;
-	border: 4px solid $midblue;
+	border: 4px solid transparent;
 	border-radius: 50px;
 	position: relative;
 	color: $white;
 	cursor: pointer;
+	font-weight: $semi-bold;
+	font-size: 14px;
 	padding: 5px 45px 5px 25px;
 	text-transform: uppercase;
+	transition: $nbSec ease-in-out;
+	text-align: left;
+
 	.uk-icon {
 		position: absolute;
 		top: 50%;
+		color: $white;
 		right: 15px;
 		transform: translateY(-50%);
+		transition: $nbSec ease-in-out;
 		z-index: 1;
+	}
+
+	@include hover {
+		background: rgba($midblue, .8);
+		color: $white;
+
+		.uk-icon {
+			color: $white;
+		}
+	}
+
+	@media (max-width: $breakpointLarge) {
+		font-size: 12px;
+		padding: 5px 40px 5px 15px;
+		.uk-icon {
+			right: 5px;
+		}
+	}
+
+	@media (max-width: $breakpointMedium) {
+		padding: 5px 31px 5px 15px;
 	}
 }
 
 .uk-button--green {
 	background: $green;
-	border: 4px solid $green;
+
+	@include hover {
+		background: rgba($green, .7);
+		color: $white;
+
+		svg {
+			color: $white;
+		}
+	}
 }
 
 .uk-button--white {
@@ -65,12 +102,15 @@ input[type='submit'] {
 	border: 4px solid $skyblue;
 	color: $blue;
 	position: relative;
+
 	svg {
 		color: $skyblue;
 	}
+
 	@include hover {
 		background: $overlayblue;
 		color: $blue;
+
 		svg {
 			color: $black;
 		}

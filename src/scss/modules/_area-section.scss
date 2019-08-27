@@ -1,10 +1,13 @@
 .area-section {
 	padding: 120px 0 85px;
+
 	.uk-container {
 		padding-left: 35px;
 		padding-right: 35px;
 	}
+
 	@media (max-width: $breakpointSmall) {
+		padding: 30px 0 50px;
 		.uk-container {
 			padding-left: 15px;
 			padding-right: 15px;
@@ -18,9 +21,11 @@
 			flex-direction: column;
 		}
 	}
+
 	@media (max-width: $breakpointSmall) {
 		>.uk-flex {
 			flex-direction: column;
+
 			&:first-of-type {
 				>.uk-flex {
 					flex-direction: column;
@@ -33,6 +38,7 @@
 .area-card--full,
 .area-card--half {
 	padding: 5px;
+
 	@media (max-width: $breakpointSmall) {
 		padding: 5px 0;
 	}
@@ -40,6 +46,7 @@
 
 .area-card--inner {
 	position: relative;
+
 	>a {
 		position: absolute;
 		opacity: 0;
@@ -50,8 +57,10 @@
 		z-index: 1;
 		width: 100%;
 		transition: $nbSec ease-in-out;
+
 		@include hover {
 			opacity: 1;
+
 			~.area-bottom .uk-icon-button::after {
 				transform: scale(1.5);
 			}
@@ -63,6 +72,7 @@
 	.area-card--inner {
 		min-height: 610px;
 	}
+
 	@media (max-width: $breakpointSmall) {
 		.area-card--inner {
 			min-height: 300px;
@@ -73,6 +83,48 @@
 .area-card--half {
 	.area-card--inner {
 		min-height: 300px;
+	}
+
+	.area-card--inner-empty {
+		.area-bottom {
+			padding: 0 20px 55px;
+		}
+	}
+
+	@media (max-width: $breakpointLarge) {
+		.area-card--inner-empty {
+			min-height: 200px;
+
+			.area-bottom {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				padding: 0 20px 20px;
+			}
+		}
+	}
+
+	@media (max-width: $breakpointMedium) {
+		.area-card--inner-empty {
+			.area-bottom {
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+.area-btn--wrap {
+	@media (max-width: $breakpointLarge) {
+		.uk-button {
+			float: right;
+			margin-top: 30px;
+		}
+	}
+	@media (max-width: $breakpointMedium) {
+		.uk-button {
+			float: none;
+			width: 60%;
+		}
 	}
 }
 
@@ -86,16 +138,20 @@
 	z-index: 3;
 	padding: 10px 20px 55px;
 	pointer-events: none;
+
 	span {
 		color: $white;
 		display: block;
 		margin-bottom: 25px;
-		font-size: 22px;
+		font-weight: $semi-bold;
+		font-size: 24px;
 	}
+
 	>.uk-icon-button {
 		background: $midblue;
 		color: $white;
 		position: relative;
+
 		&::after {
 			position: absolute;
 			left: 0;
@@ -103,13 +159,14 @@
 			width: 100%;
 			height: 100%;
 			border-radius: 50px;
-			background: rgba($midblue, .3);
+			background: rgba($midblue, .6);
 			content: '';
 			transition: $nbSec ease-in-out;
 			z-index: 2;
 		}
 	}
 }
+
 
 .area-card--text {
 	.area-bottom {

@@ -16,8 +16,7 @@ var theme = {
 		const dropdownBtn = $('.js-toggle-dropdown');
 		const dropdownActive = 'dropdown--active';
 		const dropdownContainer = $('.uk-navbar-dropdown');
-		const fixedSection = $('.js-members-section');
-		const fixedClass = 'fixed-class';
+		const equalItem = $('.js-height-match');
 		if(toggleBtn.length){
 			this.toggleNav(toggleBtn, classActive, nav);
 		}
@@ -27,28 +26,18 @@ var theme = {
 		if(dropdownContainer.length) {
 			this.toggleDopdownOut(dropdownContainer, dropdownBtn, dropdownActive);
 		}
-		// this.stopScroll(fixedSection, fixedClass);
+		this.equalHeight(equalItem);
 	},
 
-	// stopScroll: function(fixedSection, fixedClass) {
-	// 	let distance = fixedSection.offset().top;
-	// 	$(window).scroll(function() {
-	// 		if ($(window).scrollTop() >= distance ) {
-	// 			// fixedSection.addClass(fixedClass);
-	// 		}
-	// 	});
-	// 	// $(document).scroll(function(e){
-	// 	// 	if (fixedSection.hasClass(fixedClass)) {
-	// 	// 		//if (e.target.id == 'masc') {
-	// 	// 			console.log('lalalala');
-	// 	// 			e.preventDefault();
-	// 	// 		//}
-	// 	// 		//else{
-	// 	// 		//	e.stopPropagation();
-	// 	// 		//}
-	// 	// 	}
-	// 	// });
-	// },
+	equalHeight: function(equalItem) {
+		let itemHeight = 0;
+		equalItem.each(function(){
+			if($(this).outerHeight() > itemHeight) {
+				itemHeight = $(this).outerHeight();
+			}
+		});
+		equalItem.css('height', itemHeight);
+	},
 
 	protectLinks: function() {
 		var $links = $("a[target='_blank']");

@@ -1,8 +1,12 @@
 //----------  variables
 //------------------------------------------------------------------------------
 
-$font-default: 'Arial', sans-serif;
+$font-default: 'Oswald', sans-serif;
 $bold: 700;
+$semi-bold: 600;
+$medium: 500;
+$light: 300;
+$extra-light: 200;
 
 //
 // UIkit
@@ -54,6 +58,7 @@ $red: #e11e2f;
 $light-grey: #f5f5f5;
 $soft-grey: #f1f1f1;
 $icon-grey: #bfc4c9;
+$dark-grey: #797f86;
 $grey: lighten($black, $nbCent);
 $lightGrey: lighten($grey, $nbCent);
 
