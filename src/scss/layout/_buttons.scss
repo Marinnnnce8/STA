@@ -1,14 +1,7 @@
-//----------  button
-//------------------------------------------------------------------------------
 a,
 button {
 	appearance: none;
 	outline: none;
-	// @include media-breakpoint-up(lg) {
-	// 	&:focus {
-	// 		outline: 1px dashed rgba($orange, .2);
-	// 	}
-	// }
 }
 
 button,
@@ -19,23 +12,6 @@ input[type='submit'] {
 	cursor: pointer;
 	outline: none;
 	padding: 0;
-}
-
-.btn {
-	background-color: $black;
-	color: $white;
-	display: inline-block;
-	font-size: 14px;
-	font-weight: bold;
-	height: 40px;
-	line-height: 40px;
-	padding: 0 20px;
-	transition: 0.4s ease-out;
-
-	@include hover {
-		background-color: lighten($black, 30%);
-		border-radius: 20px;
-	}
 }
 
 .uk-button {
@@ -89,7 +65,7 @@ input[type='submit'] {
 	background: $green;
 
 	@include hover {
-		background: rgba($green, .7);
+		background: rgba($green, .8);
 		color: $white;
 
 		svg {
@@ -119,7 +95,7 @@ input[type='submit'] {
 		>.uk-icon {
 			color: $black;
 			transition: $nbSec ease-in-out;
-	
+
 			svg {
 				color: $black;
 			}
@@ -139,8 +115,11 @@ input[type='submit'] {
 	color: $midblue;
 	transition: $nbSec ease-in-out;
 
-	svg {
+	.uk-icon, svg {
 		color: $midblue;
+	}
+
+	svg {
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -156,7 +135,7 @@ input[type='submit'] {
 	border: 3px solid $twitter-blue;
 	color: $twitter-blue;
 
-	svg {
+	.uk-icon, svg {
 		color: $twitter-blue;
 	}
 }
@@ -165,7 +144,82 @@ input[type='submit'] {
 	border: 3px solid $icon-grey;
 	color: $icon-grey;
 
-	svg {
+	.icon-staglobe {
 		color: $icon-grey;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	@include hover {
+		color: $icon-grey;
+		box-shadow: none;
+	}
+}
+
+.text-button {
+	text-transform: uppercase;
+	position: relative;
+	display: inline-block;
+	padding: 0 15px 0 0;
+	font-family: $font-default;
+	color: $ui-blue;
+
+	span {
+		position: absolute;
+		top: 50%;
+		transform: translate(50%, -50%);
+		right: 0;
+		color: $skyblue;
+	}
+
+	@include hover {
+		text-decoration: underline;
+		opacity: .8;
+	}
+}
+
+.text-button--white {
+	color: $white;
+
+	@include hover {
+		opacity: 1;
+	}
+}
+
+.check-button {
+	width: 35px;
+	height: 35px;
+	background: $ui-blue;
+	border-radius: 50%;
+	position: relative;
+	padding: 0;
+
+	.icon-stacorrect-symbol {
+		text-align: center;
+
+		&::before {
+			position: absolute;
+			transform: translate(-50%, -50%);
+			top: 50%;
+			left: 50%;
+			z-index: 1;
+			width: 30px;
+		}
+	}
+}
+
+.listing-button {
+	line-height: 0;
+	padding: 13px 35px 13px 15px;
+	position: relative;
+
+	.icon-stacorrect-symbol {
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		right: 0;
+		width: 14px;
 	}
 }

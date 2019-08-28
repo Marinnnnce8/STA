@@ -48,9 +48,13 @@
 		margin-bottom: 10px;
 		min-width: 130px;
 		text-align: center;
-		svg {
-			width: 14px;
-		}
+	}
+
+	.icon-stacorrect-symbol {
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 
 	@media (max-width: $breakpointSmall) {
@@ -110,7 +114,7 @@
 
 @keyframes goTop {
 	0% {
-		top: auto;
+		top: 50%;
 	}
 
 	100% {

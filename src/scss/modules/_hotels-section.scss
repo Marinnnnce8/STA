@@ -244,7 +244,7 @@
 			padding: 0 25px;
 			margin-bottom: 5px;
 
-			span {
+			.icon-stacorrect-symbol {
 				display: inline-block;
 				width: 20px;
 				height: 20px;
@@ -255,7 +255,7 @@
 				left: 0;
 				transform: translateY(-50%);
 
-				svg {
+				&::before {
 					color: $white;
 					width: 14px;
 					top: 50%;

@@ -65,6 +65,9 @@
 			~.area-bottom .uk-icon-button::after {
 				transform: scale(1.5);
 			}
+			~.area-bottom > .uk-button {
+				background: rgba($midblue, .8);
+			}
 		}
 	}
 }

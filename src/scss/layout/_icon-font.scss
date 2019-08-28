@@ -38,6 +38,9 @@
 	@if $filename == ico-phone {
 		$char: '\E004';
 	}
+	@if $filename == ico-quote {
+		$char: '\E005';
+	}
 
 	@return $char;
 }
@@ -68,5 +71,8 @@
 }
 .font-ico-phone {
 	@include font(ico-phone);
+}
+.font-ico-quote {
+	@include font(ico-quote);
 }
 

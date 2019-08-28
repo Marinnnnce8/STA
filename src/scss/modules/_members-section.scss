@@ -140,6 +140,10 @@
 		width: 28px;
 	}
 
+	.uk-icon {
+		color: $white;
+	}
+
 	@media (max-width: $breakpointLarge) {
 		position: absolute;
 		top: 50%;
@@ -171,19 +175,6 @@
 	@media (max-width: $breakpointLarge) {
 		display: block;
 	}
-	// .members-wrap {
-	// 	&:first-of-type {
-	// 		background: $dark-blue;
-	// 		padding: 50px 20px;
-	// 	}
-
-	// 	&:last-of-type {
-	// 		background: $midblue;
-	// 		padding: 150px 0 100px 50px;
-	// 	}
-	// }
-
-	
 }
 
 .members-item--circle {

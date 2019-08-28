@@ -1,6 +1,3 @@
-//----------  variables
-//------------------------------------------------------------------------------
-
 $font-default: 'Oswald', sans-serif;
 $bold: 700;
 $semi-bold: 600;
@@ -8,11 +5,7 @@ $medium: 500;
 $light: 300;
 $extra-light: 200;
 
-//
-// UIkit
-//
 
-// Breakpoints
 $breakpointSmall: 640px;
 $breakpointMedium: 960px;
 $breakpointLarge: 1200px;
@@ -23,14 +16,10 @@ $breakpointMediumMax: ($breakpointLarge - 1);
 $breakpointLargeMax: ($breakpointXlarge - 1);
 $breakpointMobile: 479px;
 
-//
-// NB
-//
 
-$nbCent: 32%;
+$nbCent: 37%;
 $nbSec: 256ms;
 
-// Spacing
 $nbSpace: 2.5rem;
 $nbSpaceSmall: $nbSpace * 0.6;
 $nbSpaceXsmall: $nbSpace * 0.3;
@@ -40,7 +29,6 @@ $nbGutter: $nbSpace * 0.2;
 $nbGutterSmall: $nbGutter / 2;
 $nbGutterXsmall: $nbGutterSmall / 2;
 
-// Colour
 $white: #fff;
 $green: #30af7a;
 $green-light: #78daad;
@@ -50,12 +38,19 @@ $midblue: #3165b0;
 $lightblue: #f3f8fb;
 $softblue: #cce3f5;
 $skyblue: #93c3eb;
+$tableblue: #dce7f7;
+$pastelblue: #eaf7ff;
 $overlayblue: #a6dbfb;
 $babyblue: #dbe7f7;
 $dark-blue: #01215a;
 $twitter-blue: #1da1f2;
+$ui-blue: #3165b0;
+$message-blue: #bedeed;
 $red: #e11e2f;
+$soft-red: #f0afb5;
 $light-grey: #f5f5f5;
+$lilac: #d3d1e6;
+$orange: #fadab3;
 $soft-grey: #f1f1f1;
 $icon-grey: #bfc4c9;
 $dark-grey: #797f86;
@@ -68,12 +63,9 @@ $site-colors: (
 	'red': $red
 ) !default;
 
-// Animation
 $nbSpeed: $nbSec;
 $nbSpeedShort: $nbSpeed / 2;
 $nbSpeedLong: $nbSpeed * 2;
 
-//
-// Theme
-//
+$quote: 'ico-quote';
 
