@@ -9,7 +9,7 @@ const	globalVars = require('./_global-vars');
 	Assets Files
  ----------------------------------------------------------------------------------------------*/
 gulp.task('assets', function() {
-	runSequence('assets-img-prep', 'assets-img-sync', 'assets-fonts');
+	runSequence('assets-img-prep', 'assets-img-sync', 'assets-fonts', 'favicon-copy');
 });
 
 // copy fonts
@@ -67,4 +67,10 @@ gulp.task('assets-img-sync', function() {
 				}
 			}
 		}));
+});
+
+
+gulp.task('favicon-copy', function(){
+    return gulp.src('src/favicon/**')
+	.pipe(gulp.dest('dist/favicon'));
 });

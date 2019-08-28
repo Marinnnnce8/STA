@@ -8,15 +8,13 @@ const globalVars = require('./src/config/gulp-tasks/_global-vars');
 gulp.task('build', function() {
 	globalVars.createDistFolder();
 	globalVars.productionBuild = true;
-	fs.copyFileSync('favicon.ico', 'dist/favicon.ico');
-	runSequence('html-clean', 'html', 'css','css-push', 'js', 'assets');
+	runSequence('html-clean', 'html', 'css','css-copy', 'js', 'assets');
 });
 
 gulp.task('build-dev', function() {
 	globalVars.createDistFolder();
 	globalVars.productionBuild = false;
-	fs.copyFileSync('favicon.ico', 'dist/favicon.ico');
-	runSequence('html', 'css', 'css-push', 'js', 'assets');
+	runSequence('html', 'css', 'css-copy', 'js', 'assets');
 });
 
 // delete dist folder

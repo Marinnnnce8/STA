@@ -37,7 +37,7 @@ gulp.task('css', function () {
 		.pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('css-push', function(){
+gulp.task('css-copy', function(){
     return gulp.src('src/css/*.css')
 	.pipe(gulp.dest('dist/css'));
 });

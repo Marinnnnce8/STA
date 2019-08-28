@@ -38,11 +38,11 @@ gulp.task("js-lint", function() {
 		.pipe(eslint.failAfterError());
 });
 
-gulp.task('js-push', function(){
+gulp.task('js-copy', function(){
     return gulp.src(['src/js/*.js', '!src/js/theme.js'])
 	.pipe(gulp.dest(destinationFolder));
 });
 
 gulp.task("js", function() {
-	runSequence("js-lint", "js-push", "js-task", () => false);
+	runSequence("js-lint", "js-copy", "js-task", () => false);
 });
