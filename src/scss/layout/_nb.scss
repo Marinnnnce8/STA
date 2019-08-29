@@ -508,7 +508,8 @@ em {
 	background: $soft-red;
 }
 
-.uk-input:focus {
+.uk-input:focus,
+.uk-textarea:focus {
 	border: 2px solid $black;
 }
 

@@ -7,7 +7,7 @@
 		}
 
 		&:last-of-type {
-			padding: 150px 0 100px 50px;
+			padding: 20px 0 100px 50px;
 		}
 	}
 
@@ -101,7 +101,7 @@
 }
 
 .members-item--right {
-	padding-top: 60px;
+	padding-top: 40vh;
 	width: 75%;
 
 	@media (max-width: $breakpointMedium) {
@@ -164,7 +164,7 @@
 }
 
 .members-scroll-wrapp {
-	margin: 0 41%;
+	margin: 0 40.5%;
 	position: relative;
 	padding-top: 300px;
 	width: 30%;

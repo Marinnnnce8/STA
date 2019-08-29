@@ -2,7 +2,7 @@
 	position: relative;
 
 	.uk-container {
-		padding: 5px 0 2px;
+		padding: 5px 0 10px;
 	}
 
 	.uk-logo img {
@@ -136,6 +136,10 @@
 	}
 
 	@media (max-width: $breakpointSmall) {
+		.uk-container {
+			padding: 5px 0 2px;
+		}
+
 		.uk-logo img {
 			max-width: 125px;
 		}

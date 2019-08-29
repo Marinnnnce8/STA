@@ -6,7 +6,7 @@
  */
 
 var theme = {
-	init: function() {
+	init: function () {
 		this.protectLinks();
 		this.touchHelper();
 		const toggleBtn = $(".js-toggle-nav");
@@ -20,6 +20,7 @@ var theme = {
 		const listingText = $(".listing-item__text");
 		const listingItemActive = "listing-item-bottom--active";
 		const listingItem = $(".listing-item-bottom");
+		const fixedBckg = $('.members-section');
 		if (toggleBtn.length) {
 			this.toggleNav(toggleBtn, classActive, nav);
 		}
@@ -44,11 +45,20 @@ var theme = {
 				listingItemActive
 			);
 		}
+		if (navigator.userAgent.match(/Trident\/7\./) && fixedBckg.length) {
+			$('body').on("mousewheel", function () {
+				event.preventDefault();
+
+				var wheelDelta = event.wheelDelta;
+				var currentScrollPosition = window.pageYOffset;
+				window.scrollTo(0, currentScrollPosition - wheelDelta);
+			});
+		}
 	},
 
-	equalHeight: function(equalItem) {
+	equalHeight: function (equalItem) {
 		let itemHeight = 0;
-		equalItem.each(function() {
+		equalItem.each(function () {
 			if ($(this).outerHeight() > itemHeight) {
 				itemHeight = $(this).outerHeight();
 			}
@@ -56,12 +66,11 @@ var theme = {
 		equalItem.css("height", itemHeight);
 	},
 
-	protectLinks: function() {
+	protectLinks: function () {
 		var $links = $("a[target='_blank']");
 		if (!$links.length) return;
 
-		// Make sure external links have the appropriate rel attributes
-		$links.each(function() {
+		$links.each(function () {
 			var $a = $(this),
 				rel = $a.attr("rel"),
 				protect = ["noopener", "noreferrer"];
@@ -75,7 +84,7 @@ var theme = {
 		});
 	},
 
-	touchHelper: function() {
+	touchHelper: function () {
 		if (
 			(("ontouchstart" in window || navigator.msMaxTouchPoints > 0) &&
 				window.matchMedia("screen and (max-width: 1200px)").matches) ||
@@ -88,21 +97,21 @@ var theme = {
 		}
 	},
 
-	toggleNav: function(obj, classActive, nav) {
-		obj.click(function() {
+	toggleNav: function (obj, classActive, nav) {
+		obj.click(function () {
 			obj.toggleClass(classActive);
 			nav.slideToggle();
 		});
 	},
 
-	toggleDropdown: function(obj, classActive) {
-		obj.click(function() {
+	toggleDropdown: function (obj, classActive) {
+		obj.click(function () {
 			obj.parent().toggleClass(classActive);
 		});
 	},
 
-	toggleDopdownOut: function(obj, dropdownBtn, classActive) {
-		$(document).mouseup(function(e) {
+	toggleDopdownOut: function (obj, dropdownBtn, classActive) {
+		$(document).mouseup(function (e) {
 			if (!obj.is(e.target) && obj.has(e.target).length === 0) {
 				dropdownBtn.parent().removeClass(classActive);
 				obj.hide();
@@ -110,21 +119,21 @@ var theme = {
 		});
 	},
 
-	toggleText: function(obj, listingText, listingItem, listingItemActive) {
+	toggleText: function (obj, listingText, listingItem, listingItemActive) {
 		if (!$("html").hasClass("touch")) {
-			obj.hover(function() {
+			obj.hover(function (e) {
 				$(this)
 					.find(listingText)
-					.slideToggle();
+					.slideToggle(500);
 				$(this)
 					.find(listingItem)
 					.toggleClass(listingItemActive);
 			});
 		} else {
-			obj.click(function() {
+			obj.click(function () {
 				$(this)
 					.find(listingText)
-					.slideToggle();
+					.slideToggle(500);
 				$(this)
 					.find(listingItem)
 					.toggleClass(listingItemActive);
@@ -133,6 +142,6 @@ var theme = {
 	}
 };
 
-$(document).ready(function() {
+$(document).ready(function () {
 	theme.init();
 });

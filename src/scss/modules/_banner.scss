@@ -1,5 +1,6 @@
 .banner-section {
 	min-height: 100vh;
+	position: relative;
 }
 
 .banner-inner {
@@ -19,9 +20,11 @@
 	@media (max-width: $breakpointSmall) {
 		padding: 55px 0 30px;
 		width: 100%;
+
 		h1 {
 			margin-bottom: 50px;
 		}
+
 		.uk-button:first-of-type {
 			margin-right: 5px;
 		}
@@ -30,6 +33,7 @@
 
 .banner-box {
 	padding: 0 0 200px 100px;
+
 	@media (max-width: $breakpointSmall) {
 		padding: 0 0 50px 50px;
 	}
@@ -70,9 +74,11 @@
 			&:last-of-type {
 				padding: 0;
 			}
+
 			img {
 				width: 40px;
 			}
+
 			span:first-of-type {
 				font-size: 16px;
 			}
@@ -82,4 +88,13 @@
 			}
 		}
 	}
+}
+
+.banner-svg {
+	position: absolute;
+	width: 50%;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1;
 }

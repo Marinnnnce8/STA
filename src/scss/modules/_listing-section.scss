@@ -48,6 +48,21 @@
 		margin-bottom: 10px;
 		min-width: 130px;
 		text-align: center;
+		position: relative;
+		z-index: 2;
+		.font-ico-arrow-right {
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+			color: $white;
+		}
+		@include hover {
+			background: rgba($midblue, .8);
+		}
+		&:first-child {
+			padding: 0;
+		}
 	}
 
 	.icon-stacorrect-symbol {
@@ -72,7 +87,7 @@
 		top: 0;
 		bottom: 0;
 		width: 100%;
-		z-index: 1;
+		z-index: 0;
 	}
 }
 
@@ -98,7 +113,7 @@
 }
 
 .listing-item-bottom--active {
-	animation: goTop .1s linear forwards;
+	animation: goTop .3s .3s linear forwards;
 }
 
 .listing-item__text {
