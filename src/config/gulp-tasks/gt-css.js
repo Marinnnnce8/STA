@@ -43,7 +43,7 @@ gulp.task('css-copy', function(){
 });
 
 gulp.task('sasslint', function () {
-	return gulp.src(['src/scss/**/*.scss', 'src/html/**/**/*.scss'])
+	return gulp.src(['src/scss/*.scss'])
 		.pipe(sassLint({
 			config: '.sass-lint.yml'
 		}))
